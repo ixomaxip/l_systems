@@ -1,5 +1,5 @@
 #Turtle graphics of L-systems
-#This code don't work in playground :(, so just perform in in IDLE and enjoy
+
 from math import pi
 import turtle as tr
 
