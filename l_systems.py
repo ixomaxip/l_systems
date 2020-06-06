@@ -4,7 +4,7 @@ from math import pi
 import turtle as tr
 
 def getWord(axiom='F', newf='F', newb='b', newx='X', newy='Y', level=1):
-    #generation input word for turtle
+    #input word for turtle
     W = axiom
     
     while level > 0:
@@ -32,14 +32,14 @@ def getTempl(name='default', level=1):
     d["GosperCrv"] = ('XF', 'F', 'b', 'X+YF++YF-FX--FXFX-YF+', '-FX+YFYF++YF+FX--FX-Y', pi/3, 0)
     d["Serpinski"] = ('FXF--FF--FF', 'FF', 'b', '--FXF++FXF++FXF--', 'Y', pi/3, 0)
     
-    #Geting parametrs
+    #Getting parameters
     a, f, b, x, y, theta, alpha = d[name]
     #Generating word
     w = getWord(axiom=a, newf=f, newb=b, newx=x, newy=y, level=level)
     return (w, theta, alpha)
 
 def calcPath(word):
-    #Calculate a number of turtle's steps
+    #Calculate a number of steps
     w = word.replace('+','').replace('[','').replace(']','').replace('-','').replace('X','').replace('Y','').replace('v','')
 
     return len(w)
